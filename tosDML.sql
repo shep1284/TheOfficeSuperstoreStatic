@@ -6,6 +6,9 @@ VALUES (:productName, :description, :unitPrice, :quantityInStock, :supplierID, :
 -- SELECT
 SELECT * FROM Products WHERE productID = :productID;
 
+-- Select all table data from Products
+SELECT * FROM Products;
+
 -- DELETE
 -- Delete a product and related entries in ProductSales(on delete CASCADE in ProductSales)
 DELETE FROM Products
@@ -26,6 +29,8 @@ WHERE
     LOWER(phone) LIKE CONCAT('%', LOWER(:searchKeyword), '%') OR
     LOWER(address) LIKE CONCAT('%', LOWER(:searchKeyword), '%')));
 
+-- Select all table data from Customers
+SELECT * FROM Customers;
 
 -- UPDATE
 -- Update a customer
@@ -41,6 +46,9 @@ VALUES (:orderDate, :customerID);
 -- SELECT
 SELECT * FROM SalesOrders WHERE orderID = :orderID;
 
+-- Select all table data from SalesOrders
+SELECT * FROM SalesOrders;
+
 -- No DELETE or UPDATE operations provided for SalesOrders.
 
 -- Suppliers
@@ -50,6 +58,9 @@ VALUES (:supplierName, :contactName, :email, :phone, :address);
 
 -- SELECT
 SELECT * FROM Suppliers WHERE supplierID = :supplierID;
+
+-- Select all table data from Suppliers
+SELECT * FROM Suppliers;
 
 -- No DELETE or UPDATE operations provided for Suppliers.
 
@@ -61,6 +72,9 @@ VALUES (:productID, :orderID, :quantitySold, :salePrice);
 -- SELECT
 SELECT * FROM ProductSales WHERE productSaleID = :productSaleID;
 
+-- Select all table data from ProductSales
+SELECT * FROM ProductSales;
+
 -- No DELETE or UPDATE operations provided for ProductSales.
 
 -- ProductCategories
@@ -70,5 +84,8 @@ VALUES (:category);
 
 -- SELECT
 SELECT * FROM ProductCategories WHERE categoryID = :categoryID;
+
+-- Select all table data from ProductCategories
+SELECT * FROM ProductCategories;
 
 -- No DELETE or UPDATE operations provided for ProductCategories.
